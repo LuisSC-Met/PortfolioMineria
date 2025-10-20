@@ -26,13 +26,15 @@ def cuerpo() -> rx.Component:
         rx.html(
             """
             <iframe 
-                src="https://app.powerbi.com/view?r=TU_REPORT_ID_AQUI" 
-                width="100%" 
-                height="600px" 
+                title="Reportabilidad Oxidos" 
+                width="800" 
+                height="541.25"
+                src="https://app.powerbi.com/reportEmbed?reportId=c8038ee6-c282-40ad-980f-f9c998a97e38&autoAuth=true&ctid=d027c8a2-216a-47c0-b70b-0788758751c1" 
                 frameborder="0" 
-                style="border: none; margin: 1em 0;">
+                allowFullScreen="true">
             </iframe>
-            """
+            """,
+            dangerously_set_inner_html=True
         ),
 
         rx.text("""
@@ -50,3 +52,4 @@ def cuerpo() -> rx.Component:
         ),
         margin_top=Size.LARGE.value
     )
+
