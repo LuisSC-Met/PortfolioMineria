@@ -29,10 +29,12 @@ def index() -> rx.Component:
     )
 
 app = rx.App(
+    enable_state=False,
     stylesheets=styles.STYLESHEETS,
     style=styles.BASE_STYLE,
 )
 app.add_page(
     index,
     title="Portafolio de Luis Sierra",
+
 )
